@@ -1,0 +1,31 @@
+classe Autores{
+
+	final String nome;
+	final String img;
+
+	Autores(
+		this.nome;
+		this.img;
+	);
+}
+
+List autores = [
+	Autores('Jeanne-Marie Leprince de Beaumont')
+	Autores('Christophe Gans')
+	Autores('Sandra Vo-Anh')
+]
+
+body: ListView.builder(
+	itemCount: autores.length,
+
+	itemBuilder: (BuildContext contexto, int index){
+	return ListTile(
+		leading: CircleAvatar(
+			backgroundImage: AssetImage(
+				autores[index].img,
+				),
+			),
+		title: Text(users[index].name),
+	);
+};
+),
